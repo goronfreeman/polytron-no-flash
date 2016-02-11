@@ -1,0 +1,113 @@
+body {
+  font-family: Helvetica, Verdana, Arial;
+  text-align: center;
+  margin-top: 65px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+}
+
+.super:hover {
+  color: #00b0f8;
+}
+
+.pano:hover {
+  color: #fcff00;
+}
+
+.fez:hover {
+  color: #fd6c00;
+}
+
+.shop:hover {
+  color: #ff0000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+svg {
+  margin-bottom: 20px;
+}
+
+.content {
+  width: 32rem;
+  margin: 0 auto;
+  font-weight: 600;
+  text-align: left;
+  font-size: .9rem;
+  line-height: 100%;
+  animation: fadeUp .65s ease-in-out;
+}
+
+.contact {
+  float: left;
+}
+
+.projects {
+  float: right;
+  margin-right: 7rem;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*SVG animation*/
+.orange {
+  animation-delay: .1s;
+}
+
+.yellow {
+  animation-delay: .2s;
+}
+
+.blue {
+  animation-delay: .3s;
+}
+
+path {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: dash 2s ease-in-out forwards;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1500;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  svg {
+    height: 300px;
+    width: 300px;
+  }
+
+  .content {
+    width: 19rem;
+  }
+
+  .projects {
+    margin-right: 0;
+  }
+}
