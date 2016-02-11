@@ -44,7 +44,8 @@ svg {
   text-align: left;
   font-size: .9rem;
   line-height: 100%;
-  animation: fadeUp .65s ease-in-out;
+  -webkit-animation: fadeUp .65s ease-in-out;
+          animation: fadeUp .65s ease-in-out;
 }
 
 .contact {
@@ -56,35 +57,65 @@ svg {
   margin-right: 7rem;
 }
 
-@keyframes fadeUp {
+@-webkit-keyframes fadeUp {
   0% {
-    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
     opacity: 0;
   }
 
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
 
 /*SVG animation*/
 .orange {
-  animation-delay: .1s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
 }
 
 .yellow {
-  animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
 }
 
 .blue {
-  animation-delay: .3s;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
 }
 
 path {
   stroke-dasharray: 1500;
   stroke-dashoffset: 1500;
-  animation: dash 2s ease-in-out forwards;
+  -webkit-animation: dash 2s ease-in-out forwards;
+          animation: dash 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1500;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes dash {
